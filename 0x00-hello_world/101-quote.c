@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * main - entry point to print std error
