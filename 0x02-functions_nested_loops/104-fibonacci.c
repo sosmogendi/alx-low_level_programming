@@ -38,7 +38,7 @@ int main(void)
 			printf(", ");
 		num1_half1 = num2_half1;
 		num1_half2 = num2_half2;
-		num2_half2 = half1;
+		num2_half1 = half1;
 		num2_half2 = half2;
 	}
 	printf("\n");
