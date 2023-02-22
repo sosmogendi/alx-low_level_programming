@@ -36,7 +36,7 @@ int main(void)
 		printf("%lu%lu", half1, half2);
 		if (count != 98)
 			printf(", ");
-		num1_half1 = num2_half2;
+		num1_half1 = num2_half1;
 		num1_half2 = num2_half2;
 		num2_half2 = half1;
 		num2_half2 = half2;
