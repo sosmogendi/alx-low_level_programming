@@ -18,6 +18,6 @@ int main(void)
 		}
 		a++;
 	}
-	_putchar(b);
+	printf("%d\n", b);
 	return (0);
 }
