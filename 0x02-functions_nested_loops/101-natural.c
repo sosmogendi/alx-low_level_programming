@@ -16,7 +16,7 @@ int main(void)
 		{
 			b += a;
 		}
-		a++
+		a++;
 	}
 	_putchar(b);
 	return (0);
