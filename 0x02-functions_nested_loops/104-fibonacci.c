@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-nt main(void)
+int main(void)
 {
 	int count;
 	unsigned long num1 = 0, num2 = 1, fib;
