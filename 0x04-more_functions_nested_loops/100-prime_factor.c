@@ -19,7 +19,7 @@ int main(void)
 		}
 		for (x = 3; (prime / 2); x += 2)
 		{
-			if ((prime / x) == 0)
+			if ((prime % x) == 0)
 				prime /= x;
 		}
 	}
