@@ -12,7 +12,7 @@ void print_triangle(int size)
 	int x = 0, y = size, count;
 
 	if (size <= 0)
-		_putchar('\n');
+		putchar('\n');
 	else
 	{
 		for (count = 0; count < y; count++)
@@ -20,13 +20,13 @@ void print_triangle(int size)
 			while (x < y)
 			{
 				if ((x + count + 1) >= y)
-					_putchar('#');
+					putchar('#');
 				else
-					_putchar(' ');
+					putchar(' ');
 				x++;
 			}
 			x = 0;
-			_putchar('\n');
+			putchar('\n');
 		}
 	}
 }
