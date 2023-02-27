@@ -20,7 +20,8 @@ void rev_string(char *s)
 	for (x = 0; x < count; x++)
 	{
 		count--;
-		rudi = s[count];
+		rudi = s[x];
+		s[x] = s[count];
 		s[count] = rudi;
 	}
 
