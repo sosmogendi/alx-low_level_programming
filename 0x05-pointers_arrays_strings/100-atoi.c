@@ -44,4 +44,5 @@ int _atoi(char *s)
 	}
 	if (q == 0)
 		return (0);
+	return (o);
 }
