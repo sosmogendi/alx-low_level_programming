@@ -25,7 +25,7 @@ int _atoi(char *s)
 	}
 	while (m < p && q == 0)
 	{
-		if (s[m] == '_')
+		if (s[m] == '-')
 		{
 			++n;
 		}
