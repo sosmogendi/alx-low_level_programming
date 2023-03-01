@@ -31,5 +31,5 @@ char *cap_string(char *c)
 			c[x] -= 32;
 		x++;
 	}
-	return (x);
+	return (c);
 }
