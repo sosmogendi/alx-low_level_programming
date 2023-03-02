@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - magic function
+ * Description: 'magic happens here'
+ * Return: 0
+ */
+
 int main(void)
 {
 	int n;
