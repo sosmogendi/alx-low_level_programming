@@ -1,8 +1,4 @@
 #include <stdio.h>
-/**
- * main - prints magic number
- * Return: 0
- */
 
 int main(void)
 {
@@ -25,3 +21,4 @@ int main(void)
 	printf("a[2] = %d\n", a[2]);
 	return (0);
 }
+
