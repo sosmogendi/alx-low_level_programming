@@ -4,7 +4,7 @@
 /**
  * _memcpy - copies n bytes from memory area src to
  *  memory area dest
- *  @src: source memory area
+ *  @src: where to copy from
  *  @dest: memory area to copy to
  *  @n: bytes to be copied
  *  Return: a pointer to dest
@@ -12,14 +12,14 @@
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int x;
-
-	/* declare and type casting */
-	char *m = (char *)dest;
-	char *s = (char *)src;
+	int x = 0;
+	int m = n;
 
 	/* copying "n" bytes of source to target */
-	for (x = 0; x < n; x++)
-		m[x] = s[x];
-	return (m);
+	for (; x < m; x++)
+	{
+		dest[x] = src[x];
+		n--;
+	}
+	return (dest);
 }
