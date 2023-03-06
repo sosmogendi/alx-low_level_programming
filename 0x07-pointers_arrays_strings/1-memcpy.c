@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 
 /**
  * _memcpy - copies n bytes from memory area src to
@@ -21,5 +21,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	/* copying "n" bytes of source to target */
 	for (x = 0; x < n; x++)
 		m[x] = s[x];
-	return (dest);
+	return (m);
 }
