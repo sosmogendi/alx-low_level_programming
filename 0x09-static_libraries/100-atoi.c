@@ -10,8 +10,6 @@
 
 int _atoi(char *s)
 {
-	/* initialize result */
-	int x = 0;
 	/* initialize sign as positive */
 	int sign = 1;
 	/* initialize index of first digit */
