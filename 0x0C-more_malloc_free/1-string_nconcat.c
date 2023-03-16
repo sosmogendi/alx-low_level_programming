@@ -17,6 +17,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len = (n < len2) ? n : len2; /* Maximum length to copy from s2 */
 	char *result;
 
+	if (n >= len2)
+		len = len2;
 	result = (char *) malloc(len1 + len + 1);
 
 	if (result == NULL)
