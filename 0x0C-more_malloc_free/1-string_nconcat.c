@@ -23,6 +23,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (result == NULL)
 		return (NULL);
+	if (!result)
+		return (NULL);
 	memcpy(result, s1, len1);
 	memcpy(result + len1, s2, len);
 	result[len1 + len] = '\0';
