@@ -11,14 +11,20 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *tbl;
-
-	tbl = malloc(nmemb * size);
+	void *result;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	memset(tbl, 0, nmemb * size);
-	return (tbl);
+
+	result = malloc(nmemb * size);
+
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+
+	memset(result, 0, nmemb * size);
+	return (result);
 }
