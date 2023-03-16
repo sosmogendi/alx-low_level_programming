@@ -12,42 +12,38 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 = strlen(s1);
-	unsigned int len2 = strlen(s2);
-	/*unsigned int len = (n < len2) ? n : len2;  Maximum length to copy from s2*/
+	int c, c1;
+	int sign = n;
 	char *result;
+	int len1, len2;
 
-	/* Handle null inputs as empty strings*/
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
-	/* Use the entire s2 if n is greater than or equal to its length*/
-	if (n >= len2)
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+		;
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+		;
+
+	if (sign >= len2)
 	{
-		n = len2;
+		sign = len2;
+		result = malloc(sizeof(char) * (len1 + len2 + 1));
 	}
-
-	result = malloc(len1 + n + 1); /* Allocate memory for result*/
-
+	else
+		result = malloc(sizeof(char) * (len1 + n + 1));
 	if (result == NULL)
-	{
 		return (NULL);
+	for (c = 0; c < len1; c++)
+	{
+		result[c] = s1[c];
 	}
-
-	/* Copy s1 into result*/
-	memcpy(result, s1, len1);
-
-	/* Copy at most n characters from s2 into result*/
-	memcpy(result + len1, s2, n);
-
-	/* Add null terminator to result*/
-	result[len1 + n] = '\0';
-
+	for (c1 = 0; c1 < sign; c1++)
+	{
+		result[c++] = s2[c1];
+	}
+	result[c++] = '\0';
 	return (result);
 }
