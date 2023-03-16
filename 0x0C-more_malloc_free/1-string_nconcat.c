@@ -14,18 +14,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1 = strlen(s1);
 	unsigned int len2 = strlen(s2);
+	unsigned int len = (n < len2) ? n : len2; /* Maximum length to copy from s2 */
 	char *result;
 
-	if (len2 > n)
-		result = malloc(sizeof(char) * len1 + n + 1);
-	else
-		result = malloc(sizeof(char) * len1 + len2 + 1);
+	result = malloc(sizeof(char) * len1 + len + 1);
 
 	if (result == NULL)
 		return (NULL);
 	memcpy(result, s1, len1);
-	memcpy(result + len1, s2, len2);
-	result[len1 + len2] = '\0';
+	memcpy(result + len1, s2, len);
+	result[len1 + len] = '\0';
 
 	return (result);
 }
