@@ -11,9 +11,9 @@
 
 int is_valid_number(char *num)
 {
-	long unsigned int i;
+	int i, len1 = strlen(num);
 
-	for (i = 0; i < strlen(num); i++)
+	for (i = 0; i < len1; i++)
 	{
 		if (!isdigit(num[i]))
 		{
@@ -32,9 +32,7 @@ int is_valid_number(char *num)
 
 int multiply(char *num1, char *num2)
 {
-	int result = atoi(num1) * atoi(num2);
-
-	return (result);
+	return (atoi(num1) * atoi(num2));
 }
 
 /**
@@ -52,7 +50,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
 	num1 = argv[1];
