@@ -11,14 +11,13 @@
 
 int is_valid_number(char *num)
 {
-	int i, len1 = strlen(num);
-
-	for (i = 0; i < len1; i++)
+	while (*num != '\0')
 	{
-		if (!isdigit(num[i]))
+		if (!isdigit(*num))
 		{
 			return (0);
 		}
+		num++;
 	}
 	return (1);
 }
