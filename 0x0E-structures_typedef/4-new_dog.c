@@ -9,6 +9,7 @@
  * @owner: dog's owner
  * Description: this function creates new dog and
  * all its elements
+ * Return: pointer to buffer of datatype new dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -20,7 +21,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	/* copying name  */
 	myDog->name = malloc(strlen(name) + 1);
-	if (myDog == NULL)
+	if (myDog->name == NULL)
 	{
 		free(myDog);
 		return (NULL);
