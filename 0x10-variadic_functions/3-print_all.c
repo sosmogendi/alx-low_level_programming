@@ -11,44 +11,41 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0;
+	int count = 0;
 	char c;
-	char *s;
+	int i;
 	float f;
+	char *s;
 
 	va_start(args, format);
-	while (format[i] != '\0')
+
+	while (format[count])
 	{
-	if (format[i] == 'c')
+	if (format[count] == 'c')
 	{
-	c = (char)va_arg(args, int);
+	c = va_arg(args, int);
 	printf("%c", c);
+	printf(", ");
 	}
-	else if (format[i] == 'i')
+	if (format[count] == 'i')
 	{
 	i = va_arg(args, int);
 	printf("%d", i);
+	printf(", ");
 	}
-	else if (format[i] == 'f')
+	if (format[count] == 'f')
 	{
-	f = (float)va_arg(args, double);
+	f = va_arg(args, double);
 	printf("%f", f);
+	printf(", ");
 	}
-	else if (format[i] == 's')
+	if (format[count] == 's')
 	{
 	s = va_arg(args, char*);
-	if (s == NULL)
-	{
-		printf("(nil)");
+	printf("%s", s ? s : "(nil)");
 	}
-	else
-	{
-	printf("%s", s);
-	}
-	}
-	i++;
+	count++;
 	}
 	printf("\n");
 	va_end(args);
 }
-
