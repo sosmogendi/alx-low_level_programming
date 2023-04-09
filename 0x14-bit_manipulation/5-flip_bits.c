@@ -14,10 +14,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int j = n ^ m;
 	unsigned int size = 0;
 
-	while (j)
+	while (j != 0)
 	{
-		size++;
-		j &= (j - 1);
+		size += j & 1; /* add the LSB to the size */
+		j >>= 1; /* shift j to the right by one bit */
 	}
 	return (size);
 }
