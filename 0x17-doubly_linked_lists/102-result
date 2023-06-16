@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ * is_palindrome - Check if a number is a palindrome
+ * @n: The number to check
+ *
+ * Return: 1 if the number is a palindrome, 0 otherwise
+ */
+
 int is_palindrome(int m) {
     int reversed = 0, orig = m, remainder;
     while (m != 0) {
@@ -9,6 +16,12 @@ int is_palindrome(int m) {
     }
     return reversed == orig;
 }
+
+/**
+ * main - Entry point of the program
+ *
+ * Return: 0 on success
+ */
 
 int main() {
     int largest_palindrome = 0;
