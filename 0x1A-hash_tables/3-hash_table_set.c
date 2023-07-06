@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* Check if the hash table, key, and value are not NULL */
 	if (ht == NULL || key == NULL || value == NULL)
-		return 0;
+		return (0);
 	/* Get the index for the key using the key_index function */
 	index = key_index((unsigned char *)key, ht->size);
 	/* Check if the key already exists, update its value if it does */
