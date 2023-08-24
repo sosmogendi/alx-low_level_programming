@@ -1,8 +1,8 @@
 CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c school.c
 NAME = school
 RM = /bin/rm
-CFLAGS = -Wall -Werror -Wextra -pedantic
 
 .PHONY: all clean oclean fclean re
 
